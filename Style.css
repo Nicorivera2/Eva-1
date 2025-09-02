@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?cs=srgb&dl=pexels-timmossholder-974314.jpg&fm=jpg');
+    row-gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+}
+
+#first {
+    height: 8vh;
+    display: flex;
+    width: 100%;
+    background-color: #FFD700;
+    align-items: center;
+
+}
+
+#first>nav {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #8B4513;
+    font-size: 1.2rem;
+
+}
+
+a:hover {
+    color: #8d0ce3;
+}
+
+
+#registro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+   
+}
+
+form {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0px 0px 5px #333333;
+    border-radius: 15px;
+    padding: 4rem;
+    width: 40vw;
+}
+
+label {
+    color: #333333;
+}
+
+input {
+    width: 100%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    background-color: #bebebe;
+    padding: 0px .5rem;
+
+}
+
+input::placeholder {
+    color: #666666;
+    font-weight: 400;
+}
+
+h1 {
+    margin-top: 90px;
+    margin-bottom: 25px;
+    color: #8B4513;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #2E8B57;
+    color: #ffffff;
+    padding: 1rem;
+    width: 90%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: .9rem;
+}
