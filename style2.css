@@ -16,20 +16,24 @@ body {
     line-height: 1.6;
     padding: 0 15px;
     background-color: #F7F7F7; /* Blanco suave */
-    background-image: url("textura-hoja.jpeg");
-    background-repeat: repeat; /* Se repite en toda la página */
     background-size: auto; /* Tamaño real de la textura */
     background-attachment: fixed; /* Queda fijo al hacer scroll */
 }
 
 /* Navegación */
+#first{
+    background-color: #2E8B57;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
 #first nav {
     display: flex;
     justify-content: center;
     gap: 15px;
     padding: 15px;
-    background-color: #2E8B57;
-    border-bottom: 3px solid #8B4513;
 }
 
 #first nav a {
@@ -38,7 +42,9 @@ body {
     font-weight: 600;
     transition: color 0.3s ease;
 }
+.register{
 
+}
 #first nav a:hover {
     color: #FFD700;
 }
