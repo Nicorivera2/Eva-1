@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HuertoHogar</title>
     <link rel="stylesheet" href="style2.css">
+    
 </head>
 <body>
 
-    <section id="first">
+    <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="catalogo.html">Catálogo</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="contacto.html">Contacto</a>
+          <div class="nav-container">
+            <a href="#" class="logo">Huerto Hogar</a>
+      
+            <!-- botón corregido: tag, id con guion, aria y type -->
+            <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">☰</button>
+
+            <!-- id con guion para que coincida con el JS -->
+            <ul class="nav-links" id="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="catalogo.html">Catálogo</a></li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+              <li><a href="registro.html" id="btnregister">Registro</a></li>
+            </ul>
+          </div>
         </nav>
-        <div class="register"> <a href="registro.html">Registrarse</a>
-        </div>
-    </section>
+      </header>
+      
+     
+      
+
 
     <section>
         <p><strong>HuertoHogar</strong> es una tienda online dedicada a llevar la frescura y calidad de los productos del campo 
@@ -45,5 +59,8 @@
             estableciendo un nuevo estándar en la distribución de productos agrícolas directos del productor al 
             consumidor.</p>
     </section>
+ <!-- cargar script con defer (opción simple) -->
+ <script src="script.js" defer></script>
+
 </body>
 </html>
