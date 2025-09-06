@@ -7,15 +7,25 @@
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <section id="first">
+    <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="catalogo.html">Catálogo</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="registro.html">Registrarse</a>
+          <div class="nav-container">
+            <a href="#" class="logo">Huerto Hogar</a>
+      
+            <!-- botón corregido: tag, id con guion, aria y type -->
+            <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">☰</button>
+
+            <!-- id con guion para que coincida con el JS -->
+            <ul class="nav-links" id="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="catalogo.html">Catálogo</a></li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+              <li><a href="registro.html" id="btnregister">Registro</a></li>
+            </ul>
+          </div>
         </nav>
-    </section>
+      </header>
 
     <section>
         <h1>Mapa de Nuestras Tiendas</h1>

@@ -18,6 +18,8 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 0;
+    padding-top: 4rem; /* igual a la altura del nav */
 }
 header{
     width: 100%;
@@ -28,17 +30,23 @@ header{
 }
 nav{
     background-color: #2E8B57;
-    padding: 1rem 2rem;
+    padding: 32px 2rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     border-radius: 15px;
-    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
     max-width: 100VW;
     display: flex;
     height: 5rem;
     align-items: center;
     flex-direction: row;
     justify-content: center;
+     /* 👇 lo importante para fijar arriba */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    
 }
 .nav-container{
     display: flex;
@@ -46,7 +54,8 @@ nav{
     align-items: center;
     max-width: 100vw;
     width: 100%;
-    margin: 0 auto;
+    
+   
 }
 .logo{
     color: #FFF;
@@ -59,18 +68,26 @@ nav{
     gap: 2rem;
     list-style: none;
     transition: all 0.3s ease;
+    
 }
-.nav-links a{
-    -ms-text-combine-horizontal: #fff;
+.nav-links a {
     text-decoration: none;
-    font-weight: 500;
-    transition: all 0.2s ;
-    color: #fff;
+    font-weight: 600;
+    color: #2E8B57; /* texto verde */
+    background-color: #ffffff; /* fondo blanco */
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
 }
-.nav-links a:hover{
-    opacity: 0.8;
-    transform: translateY(-2px);
+
+.nav-links a:hover {
+    background-color: #f0f0f0; /* gris suave */
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
+
+
 .menu-btn{
     display: none;
     background: none;
@@ -79,23 +96,28 @@ nav{
     font-size: 1.5rem;
     cursor: pointer;
 }
+.nav-links ul{
+
+}
 @media (max-width: 768px){
     .menu-btn{
         display: block;
     }
     .nav-links{
         position:fixed;
-        top: 60px;
+        top: 5rem;
         left: 0;
         right: 0;              /* en vez de width:100% */
-        max-width: 1200px;     /* igual que .nav-container */
+        max-width: 1000px;     /* igual que .nav-container */
         margin: 0 auto;        /* centra el menú */
         background-color: #2E8B57;
         flex-direction: column;
         align-items: center;
-        padding: 1rem 0;
+        padding: 2rem 0;
         clip-path: circle(0px at 90% -10%);
         pointer-events: none;
+        border-radius: 15px;
+        width: 450px;
         }
 
     .nav-links.active{
@@ -129,13 +151,14 @@ nav{
 
 }
 #btnregister{
-    background-color: #FFf;
-    color: #333;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-weight: bold;
     text-decoration: none;
-    transition: background 0.3s ease;
+    font-weight: 600;
+    color: #2E8B57; /* texto verde */
+    background-color: #ffffff; /* fondo blanco */
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
 }
 
 
@@ -176,10 +199,7 @@ section {
 
 
 
-/* Listas */
 ul {
-    margin-left: 20px;
-    margin-top: 10px;
     color: #666666;
 }
 
