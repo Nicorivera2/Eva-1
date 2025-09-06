@@ -33,7 +33,7 @@ nav{
     padding: 32px 2rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    border-radius: 15px;
+    border-radius: 25px;
     max-width: 100VW;
     display: flex;
     height: 5rem;
@@ -63,6 +63,13 @@ nav{
     font-size: 1.5rem;
     text-decoration: none;
 }
+.logo img {
+    display: block;
+    width: 110px; /* tamaño deseado */
+    height: auto;
+    border-radius: 50%;
+}
+
 .nav-links{
     display: flex;
     gap: 2rem;
@@ -286,7 +293,6 @@ footer {
     background: #2E8B57;
     color: white;
     font-size: 0.9em;
-    border-top: 3px solid #8B4513;
 }
 
 /* Contenedor de cards */
@@ -390,4 +396,92 @@ footer {
 /* Mostrar menú cuando pasas el mouse */
 #menu-categorias:hover .menu-list {
     display: block;
+}
+/* -------------------------- FOOTER --------------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #2E8B57;
+    height: auto;
+    width: 100vw;
+  }
+  
+  footer a:hover{
+      color: #2fc5e0;
+  }
+  
+  #footer-superior {
+    display: flex;
+    margin-top: -6vh;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+  
+  }
+
+  .clase-footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5vh;
+    font-weight: normal;
+  }
+  
+  #footer-superior a {
+    color: #f0f0f0;
+    text-decoration: none;
+  
+  }
+  #footer-iconos {
+    display: flex;
+    column-gap: 4.5vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  
+  #footer-iconos a:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+    filter: invert(0.38) sepia(1) saturate(5) hue-rotate(162deg) brightness(0.97) contrast(1.06);
+}
+  
+ #facebook-icon {
+    background-image: url(iconfb.png);
+    background-size: cover;
+    background-position: center;
+    text-indent: -9999px;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin: 0 8px; /* espacio entre iconos */
+}
+
+#instagram-icon {
+    background-image: url(iconig.png);
+    background-size: cover;
+    background-position: center;
+    text-indent: -9999px;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin: 0 8px;
+}
+
+#whatsapp-icon {
+    background-image: url(iconwsp.png);
+    background-size: cover;
+    background-position: center;
+    text-indent: -9999px;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin: 0 8px;
+}
+
+iframe {
+  margin-top: 1rem;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
