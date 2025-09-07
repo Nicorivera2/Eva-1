@@ -197,3 +197,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+/*carrousel*/ 
+const slides = document.querySelectorAll('.slides img');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let index = 0;
+let interval;
+
+// Función para mostrar slide
+function showSlide(i) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[i].classList.add('active');
+}
+
+// Función siguiente
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}
+
+// Función anterior
+function prevSlide() {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+}
+
+// Eventos botones
+nextBtn.addEventListener('click', () => {
+  nextSlide();
+  resetInterval();
+});
+prevBtn.addEventListener('click', () => {
+  prevSlide();
+  resetInterval();
+});
+
+// Rotación automática cada 2 segundos
+function startInterval() {
+  interval = setInterval(nextSlide, 2500);
+}
+function resetInterval() {
+  clearInterval(interval);
+  startInterval();
+}
+
+// Iniciar
+startInterval();
+// Iniciar mostrando la primera slide
+showSlide(index);
+startInterval();
