@@ -1,163 +1,463 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catálogo - HuertoHogar</title>
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
     <header>
         <nav>
-          <div class="nav-container">
-            <a href="#" class="logo">Huerto Hogar</a>
-      
-            <!-- botón corregido: tag, id con guion, aria y type -->
+            <div class="nav-container">
+            <a href="index.html" class="logo"><img src="Logo.png" alt="HuertoHogar" /></a>
+        
             <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">☰</button>
 
-            <!-- id con guion para que coincida con el JS -->
             <ul class="nav-links" id="nav-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="catalogo.html">Catálogo</a></li>
-              <li><a href="nosotros.html">Nosotros</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-              <li><a href="registro.html" id="btnregister">Registro</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="registro.html" id="btnregister">Registro</a></li>
             </ul>
-          </div>
+            </div>
         </nav>
-      </header>
+    </header>
 
-
-<section id="menu-categorias">
-    <div class="menu-toggle">
-        &#9776; Categorías
-    </div>
-    <ul class="menu-list">
-        <li><a href="#frutas">Frutas Frescas</a></li>
-        <li><a href="#verduras">Verduras Orgánicas</a></li>
-        <li><a href="#organicos">Productos Orgánicos</a></li>
-        <li><a href="#lacteos">Productos Lácteos</a></li>
-    </ul>
-</section>
-
-    <section>
-        <h2>Descripciones de Categorías</h2>
-        <h3>Frutas Frescas</h3>
-        <p>Nuestra selección de frutas frescas ofrece una experiencia directa del campo a 
-            tu hogar. Estas frutas se cultivan y cosechan en el punto óptimo de madurez para asegurar 
-            su sabor y frescura. Disfruta de una variedad de frutas de temporada que aportan vitaminas 
-            y nutrientes esenciales a tu dieta diaria. Perfectas para consumir solas, en ensaladas o como 
-            ingrediente principal en postres y smoothies. </p>
-
-        <h3>Verduras Orgánicas</h3>
-        <p>Descubre nuestra gama de verduras orgánicas, cultivadas sin el uso de 
-            pesticidas ni químicos, garantizando un sabor auténtico y natural. Cada verdura es 
-            seleccionada por su calidad y valor nutricional, ofreciendo una excelente fuente de 
-            vitaminas, minerales y fibra. Ideales para ensaladas, guisos y platos saludables, nuestras 
-            verduras orgánicas promueven una alimentación consciente y sostenible.</p>
-
-        <h3>Productos Orgánicos</h3>
-        <p> Nuestros productos orgánicos están elaborados con ingredientes naturales y 
-            procesados de manera responsable para mantener sus beneficios saludables. Desde aceites 
-            y miel hasta granos y semillas, ofrecemos una selección que apoya un estilo de vida 
-            saludable y respetuoso con el medio ambiente. Estos productos son perfectos para quienes 
-            buscan opciones alimenticias que aporten bienestar sin comprometer el sabor ni la calidad.</p>
-
-        <h3>Productos Lácteos</h3>
-        <p>Los productos lácteos de HuertoHogar provienen de granjas locales que se 
-            dedican a la producción responsable y de calidad. Ofrecemos una gama de leches, yogures 
-            y otros derivados que conservan su frescura y sabor auténtico. Ricos en calcio y nutrientes 
-            esenciales, nuestros lácteos son perfectos para complementar una dieta equilibrada, 
-            proporcionando el mejor sabor y nutrición para toda la familia.</p>
-    </section>
-
-    <section id="frutas">
-        <h2>Frutas Frescas</h2>
-        <div class="cards-container">
-            
-            <div class="card">
-            <img src="imgmanzana.jpeg" alt="Manzanas Fuji">
-            <div class="card-content">
-                <h3>FR001 - Manzanas Fuji</h3>
-                <p><strong>Precio:</strong> $1,200 CLP por kilo</p>
-                <p><strong>Stock:</strong> 150 kilos</p>
-                <p>Crujientes y dulces, cultivadas en el Valle del Maule...</p>
-            </div>
-            </div>
-
-            <div class="card">
-            <img src="imgnaranja.jpeg" alt="Naranjas Valencia">
-            <div class="card-content">
-                <h3>FR002 - Naranjas Valencia</h3>
-                <p><strong>Precio:</strong> $1,000 CLP por kilo</p>
-                <p><strong>Stock:</strong> 200 kilos</p>
-                <p>Jugosas y ricas en vitamina C, ideales para zumos frescos...</p>
-            </div>
-            </div>
-
-            <div class="card">
-            <img src="imgplatano.jpeg" alt="Plátanos Cavendish">
-            <div class="card-content">
-                <h3>FR003 - Plátanos Cavendish</h3>
-                <p><strong>Precio:</strong> $800 CLP por kilo</p>
-                <p><strong>Stock:</strong> 250 kilos</p>
-                <p>Maduros y dulces, ricos en potasio y vitaminas...</p>
-            </div>
-            </div>
-
+    <main>
+        <h1>Nuestro Catálogo de Productos</h1>
+        
+        <!-- Filtros de categoría -->
+        <div class="category-filters">
+            <a href="#all" class="category-filter active">Todos los productos</a>
+            <a href="#frutas" class="category-filter">Frutas Frescas</a>
+            <a href="#verduras" class="category-filter">Verduras Orgánicas</a>
+            <a href="#organicos" class="category-filter">Productos Orgánicos</a>
+            <a href="#lacteos" class="category-filter">Productos Lácteos</a>
         </div>
-    </section>
 
-    <section id="verduras">
-        <h2>Verduras Frescas</h2>
-        <div class="cards-container">
-            
-            <div class="card">
-            <img src="Zanahorias.jpeg" alt="Zanahorias Orgánicas">
-            <div class="card-content">
-                <h3>VR001 - Zanahorias Orgánicas</h3>
-                <p><strong>Precio:</strong> $900 CLP por kilo</p>
-                <p><strong>Stock:</strong> 100 kilos</p>
-                <p> Zanahorias crujientes cultivadas sin pesticidas en la Región de O'Higgins...</p>
-            </div>
+        <section id="descripciones">
+            <h2>Descripciones de Categorías</h2>
+            <div class="categoria-desc">
+                <h3>Frutas Frescas</h3>
+                <p>Nuestra selección de frutas frescas ofrece una experiencia directa del campo a 
+                    tu hogar. Estas frutas se cultivan y cosechan en el punto óptimo de madurez para asegurar 
+                    su sabor y frescura. Disfruta de una variedad de frutas de temporada que aportan vitaminas 
+                    y nutrientes esenciales a tu dieta diaria. Perfectas para consumir solas, en ensaladas o como 
+                    ingrediente principal en postres y smoothies. </p>
             </div>
 
-            <div class="card">
-            <img src="Espinacas.jpeg" alt="Espinacas Frescas">
-            <div class="card-content">
-                <h3>VR002 - Espinacas Frescas</h3>
-                <p><strong>Precio:</strong> $700 CLP por bolsa de 500g</p>
-                <p><strong>Stock:</strong> 80 bolsas</p>
-                <p> Espinacas frescas y nutritivas, perfectas para ensaladas y batidos verdes...</p>
-            </div>
-            </div>
-
-            <div class="card">
-            <img src="Pimientos.jpeg" alt="Pimientos Tricolores">
-            <div class="card-content">
-                <h3>VR003 - Pimientos Tricolores</h3>
-                <p><strong>Precio:</strong> $1,500 CLP por kilo</p>
-                <p><strong>Stock:</strong> 120 kilos</p>
-                <p>Pimientos rojos, amarillos y verdes, ideales para salteados y platos 
-                    coloridos...</p>
-            </div>
+            <div class="categoria-desc">
+                <h3>Verduras Orgánicas</h3>
+                <p>Descubre nuestra gama de verduras orgánicas, cultivadas sin el uso de 
+                    pesticidas ni químicos, garantizando un sabor auténtico y natural. Cada verdura es 
+                    seleccionada por su calidad y valor nutricional, ofreciendo una excelente fuente de 
+                    vitaminas, minerales y fibra. Ideales para ensaladas, guisos y platos saludables, nuestras 
+                    verduras orgánicas promueven una alimentación consciente y sostenible.</p>
             </div>
 
-        </div>
-    </section>
-     <!-- cargar script con defer (opción simple) -->
- <script src="script.js" defer></script>
-</body>
-<footer>
+            <div class="categoria-desc">
+                <h3>Productos Orgánicos</h3>
+                <p> Nuestros productos orgánicos están elaborados con ingredientes naturales y 
+                    procesados de manera responsable para mantener sus beneficios saludables. Desde aceites 
+                    y miel hasta granos y semillas, ofrecemos una selección que apoya un estilo de vida 
+                    saludable y respetuoso con el medio ambiente. Estos productos son perfectos para quienes 
+                    buscan opciones alimenticias que aporten bienestar sin comprometer el sabor ni la calidad.</p>
+            </div>
+
+            <div class="categoria-desc">
+                <h3>Productos Lácteos</h3>
+                <p>Los productos lácteos de HuertoHogar provienen de granjas locales que se 
+                    dedican a la producción responsable y de calidad. Ofrecemos una gama de leches, yogures 
+                    y otros derivados que conservan su frescura y sabor auténtico. Ricos en calcio y nutrientes 
+                    esenciales, nuestros lácteos son perfectos para complementar una dieta equilibrada, 
+                    proporcionando el mejor sabor y nutrición para toda la familia.</p>
+            </div>
+        </section>
+
+        <section id="all">
+            <h2>Todos Nuestros Productos</h2>
+            <div class="cards-container">
+                
+                <div class="card">
+                <img src="imgmanzana.jpeg" alt="Manzanas Fuji">
+                <div class="card-content">
+                    <h3>FR001 - Manzanas Fuji</h3>
+                    <p class="card-price">$1,200 CLP por kilo</p>
+                    <p><strong>Stock:</strong> 150 kilos</p>
+                    <p>Crujientes y dulces, cultivadas en el Valle del Maule. Perfectas para meriendas saludables o como ingrediente en postres.</p>
+                    <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                </div>
+                </div>
+
+                <div class="card">
+                <img src="imgnaranja.jpeg" alt="Naranjas Valencia">
+                <div class="card-content">
+                    <h3>FR002 - Naranjas Valencia</h3>
+                    <p class="card-price">$1,000 CLP por kilo</p>
+                    <p><strong>Stock:</strong> 200 kilos</p>
+                    <p>Jugosas y ricas en vitamina C, ideales para zumos frescos y refrescantes. Cultivadas en condiciones climáticas óptimas.</p>
+                    <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                </div>
+                </div>
+
+                <div class="card">
+                <img src="imgplatano.jpeg" alt="Plátanos Cavendish">
+                <div class="card-content">
+                    <h3>FR003 - Plátanos Cavendish</h3>
+                    <p class="card-price">$800 CLP por kilo</p>
+                    <p><strong>Stock:</strong> 250 kilos</p>
+                    <p>Maduros y dulces, ricos en potasio y vitaminas. Perfectos para el desayuno o como snack energético.</p>
+                    <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                </div>
+                </div>
+
+                <!-- Verduras -->
+                <div class="card">
+                    <img src="Zanahorias.jpeg" alt="Zanahorias Orgánicas">
+                    <div class="card-content">
+                        <h3>VR001 - Zanahorias Orgánicas</h3>
+                        <p class="card-price">$900 CLP por kilo</p>
+                        <p><strong>Stock:</strong> 100 kilos</p>
+                        <p>Zanahorias crujientes cultivadas sin pesticidas en la Región de O'Higgins. Excelente fuente de vitamina A y fibra.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="Espinacas.jpeg" alt="Espinacas Frescas">
+                    <div class="card-content">
+                        <h3>VR002 - Espinacas Frescas</h3>
+                        <p class="card-price">$700 CLP por bolsa de 500g</p>
+                        <p><strong>Stock:</strong> 80 bolsas</p>
+                        <p>Espinacas frescas y nutritivas, perfectas para ensaladas y batidos verdes. Cultivadas bajo prácticas orgánicas.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="Pimientos.jpeg" alt="Pimientos Tricolores">
+                    <div class="card-content">
+                        <h3>VR003 - Pimientos Tricolores</h3>
+                        <p class="card-price">$1,500 CLP por kilo</p>
+                        <p><strong>Stock:</strong> 120 kilos</p>
+                        <p>Pimientos rojos, amarillos y verdes, ideales para salteados y platos coloridos. Ricos en antioxidantes y vitaminas.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="miel.jpeg" alt="Miel Orgánica">
+                    <div class="card-content">
+                        <h3>PO001 - Miel Orgánica</h3>
+                        <p class="card-price">$5,000 CLP por frasco de 500g</p>
+                        <p><strong>Stock:</strong> 50 frascos</p>
+                        <p>Miel pura y orgánica producida por apicultores locales. Rica en antioxidantes y con un sabor inigualable.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="quinua.jpeg" alt="Quinua Orgánica">
+                    <div class="card-content">
+                        <h3>PO002 - Quinua Orgánica</h3>
+                        <p class="card-price">$3,500 CLP por paquete de 500g</p>
+                        <p><strong>Stock:</strong> 45 paquetes</p>
+                        <p>Quinua orgánica de alta calidad, rica en proteínas y aminoácidos esenciales. Perfecta para ensaladas y platos saludables.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="aceite-oliva.jpeg" alt="Aceite de Oliva Orgánico">
+                    <div class="card-content">
+                        <h3>PO003 - Aceite de Oliva Orgánico</h3>
+                        <p class="card-price">$8,000 CLP por botella de 500ml</p>
+                        <p><strong>Stock:</strong> 30 botellas</p>
+                        <p>Aceite de oliva extra virgen orgánico, prensado en frío. Ideal para aderezos y cocina saludable.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lácteos -->
+                <div class="card">
+                    <img src="leche.jpeg" alt="Leche Entera">
+                    <div class="card-content">
+                        <h3>PL001 - Leche Entera Orgánica</h3>
+                        <p class="card-price">$1,800 CLP por litro</p>
+                        <p><strong>Stock:</strong> 60 unidades</p>
+                        <p>Leche entera orgánica de vacas criadas en libertad. Rica en calcio y vitamins esenciales.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="yogurt.jpeg" alt="Yogurt Natural">
+                    <div class="card-content">
+                        <h3>PL002 - Yogurt Natural</h3>
+                        <p class="card-price">$1,200 CLP por pote de 500g</p>
+                        <p><strong>Stock:</strong> 40 potes</p>
+                        <p>Yogurt natural cremoso sin aditivos. Perfecto para desayunos saludables y como base para smoothies.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="queso.jpeg" alt="Queso Fresco">
+                    <div class="card-content">
+                        <h3>PL003 - Queso Fresco Campesino</h3>
+                        <p class="card-price">$2,500 CLP por 250g</p>
+                        <p><strong>Stock:</strong> 25 unidades</p>
+                        <p>Queso fresco elaborado artesanalmente con leche pasteurizada. Suave y versátil para múltiples preparaciones.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="frutas">
+            <h2>Frutas Frescas</h2>
+            <div class="cards-container">
+                
+                <div class="card">
+                <img src="imgmanzana.jpeg" alt="Manzanas Fuji">
+                <div class="card-content">
+                    <h3>FR001 - Manzanas Fuji</h3>
+                    <p class="card-price">$1,200 CLP por kilo</p>
+                    <p><strong>Stock:</strong> 150 kilos</p>
+                    <p>Crujientes y dulces, cultivadas en el Valle del Maule. Perfectas para meriendas saludables o como ingrediente en postres.</p>
+                    <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                </div>
+                </div>
+
+                <div class="card">
+                <img src="imgnaranja.jpeg" alt="Naranjas Valencia">
+                <div class="card-content">
+                    <h3>FR002 - Naranjas Valencia</h3>
+                    <p class="card-price">$1,000 CLP por kilo</p>
+                    <p><strong>Stock:</strong> 200 kilos</p>
+                    <p>Jugosas y ricas en vitamina C, ideales para zumos frescos y refrescantes. Cultivadas en condiciones climáticas óptimas.</p>
+                    <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                </div>
+                </div>
+
+                <div class="card">
+                <img src="imgplatano.jpeg" alt="Plátanos Cavendish">
+                <div class="card-content">
+                    <h3>FR003 - Plátanos Cavendish</h3>
+                    <p class="card-price">$800 CLP por kilo</p>
+                    <p><strong>Stock:</strong> 250 kilos</p>
+                    <p>Maduros y dulces, ricos en potasio y vitaminas. Perfectos para el desayuno o como snack energético.</p>
+                    <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="verduras">
+            <h2>Verduras Orgánicas</h2>
+            <div class="cards-container">
+                
+                <div class="card">
+                    <img src="Zanahorias.jpeg" alt="Zanahorias Orgánicas">
+                    <div class="card-content">
+                        <h3>VR001 - Zanahorias Orgánicas</h3>
+                        <p class="card-price">$900 CLP por kilo</p>
+                        <p><strong>Stock:</strong> 100 kilos</p>
+                        <p>Zanahorias crujientes cultivadas sin pesticidas en la Región de O'Higgins. Excelente fuente de vitamina A y fibra.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="Espinacas.jpeg" alt="Espinacas Frescas">
+                    <div class="card-content">
+                        <h3>VR002 - Espinacas Frescas</h3>
+                        <p class="card-price">$700 CLP por bolsa de 500g</p>
+                        <p><strong>Stock:</strong> 80 bolsas</p>
+                        <p>Espinacas frescas y nutritivas, perfectas para ensaladas y batidos verdes. Cultivadas bajo prácticas orgánicas.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="Pimientos.jpeg" alt="Pimientos Tricolores">
+                    <div class="card-content">
+                        <h3>VR003 - Pimientos Tricolores</h3>
+                        <p class="card-price">$1,500 CLP por kilo</p>
+                        <p><strong>Stock:</strong> 120 kilos</p>
+                        <p>Pimientos rojos, amarillos y verdes, ideales para salteados y platos coloridos. Ricos en antioxidantes y vitaminas.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="organicos">
+            <h2>Productos Orgánicos</h2>
+            <div class="cards-container">
+                
+                <div class="card">
+                    <img src="miel.jpeg" alt="Miel Orgánica">
+                    <div class="card-content">
+                        <h3>PO001 - Miel Orgánica</h3>
+                        <p class="card-price">$5,000 CLP por frasco de 500g</p>
+                        <p><strong>Stock:</strong> 50 frascos</p>
+                        <p>Miel pura y orgánica producida por apicultores locales. Rica en antioxidantes y con un sabor inigualable.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="quinua.jpeg" alt="Quinua Orgánica">
+                    <div class="card-content">
+                        <h3>PO002 - Quinua Orgánica</h3>
+                        <p class="card-price">$3,500 CLP por paquete de 500g</p>
+                        <p><strong>Stock:</strong> 45 paquetes</p>
+                        <p>Quinua orgánica de alta calidad, rica en proteínas y aminoácidos esenciales. Perfecta para ensaladas y platos saludables.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="aceite-oliva.jpeg" alt="Aceite de Oliva Orgánico">
+                    <div class="card-content">
+                        <h3>PO003 - Aceite de Oliva Orgánico</h3>
+                        <p class="card-price">$8,000 CLP por botella de 500ml</p>
+                        <p><strong>Stock:</strong> 30 botellas</p>
+                        <p>Aceite de oliva extra virgen orgánico, prensado en frío. Ideal para aderezos y cocina saludable.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <section id="lacteos">
+            <h2>Productos Lácteos</h2>
+            <div class="cards-container">
+                
+                <div class="card">
+                    <img src="leche.jpeg" alt="Leche Entera">
+                    <div class="card-content">
+                        <h3>PL001 - Leche Entera Orgánica</h3>
+                        <p class="card-price">$1,800 CLP por litro</p>
+                        <p><strong>Stock:</strong> 60 unidades</p>
+                        <p>Leche entera orgánica de vacas criadas en libertad. Rica en calcio y vitamins esenciales.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="yogurt.jpeg" alt="Yogurt Natural">
+                    <div class="card-content">
+                        <h3>PL002 - Yogurt Natural</h3>
+                        <p class="card-price">$1,200 CLP por pote de 500g</p>
+                        <p><strong>Stock:</strong> 40 potes</p>
+                        <p>Yogurt natural cremoso sin aditivos. Perfecto para desayunos saludables y como base para smoothies.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="queso.jpeg" alt="Queso Fresco">
+                    <div class="card-content">
+                        <h3>PL003 - Queso Fresco Campesino</h3>
+                        <p class="card-price">$2,500 CLP por 250g</p>
+                        <p><strong>Stock:</strong> 25 unidades</p>
+                        <p>Queso fresco elaborado artesanalmente con leche pasteurizada. Suave y versátil para múltiples preparaciones.</p>
+                        <button class="add-to-cart">
+                            <span class="cart-icon">🛒</span>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <div id="footer-iconos">
-            <a href="https://www.youtube.com/"
-                id="youtube-icon"></a>
+            <a href="https://www.youtube.com/" id="youtube-icon"></a>
             <a href="https://www.instagram.com" id="instagram-icon"></a>
             <a href="https://www.youtube.com/" id="whatsapp-icon"></a>
             <a href="https://www.facebook.com" id="facebook-icon"></a>
         </div>
         <div id="footer-superior">
-
             <div id="footer1" class="clase-footer">
                 <a href="https://maps.app.goo.gl/qa9fjA6MP8mYnNXm7">La huerta</a>
             </div>
@@ -167,12 +467,11 @@
                 <a href="https://www.youtube.com/">WhatsApp</a>
             </div>
             <div id="footer4" class="clase-footer">
-                
                 <a href="catalogo.html">Nuestro catalogo</a>
                 <a href="nosotros.html">Sobre Nosotros</a>
                 <a href="contacto.html">Contacta con Nosotros</a>
             </div>
         </div>
-        
     </footer>
+</body>
 </html>
