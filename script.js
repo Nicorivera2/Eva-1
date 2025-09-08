@@ -1,4 +1,3 @@
-/* ===================== MENÚ RESPONSIVE ===================== */
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const links = navLinks.querySelectorAll("a");
@@ -34,16 +33,6 @@ links.forEach(link => {
     });
 });
 
-function filterProducts(category) {
-    const products = document.querySelectorAll('.card');
-    products.forEach(product => {
-        if (category === 'all' || product.closest(`#${category}`)) {
-            product.style.display = 'block';
-        } else {
-            product.style.display = 'none';
-        }
-    });
-}
 
 document.addEventListener('DOMContentLoaded', function() {
     setActivePage();
@@ -155,11 +144,9 @@ document.addEventListener('DOMContentLoaded', function() {
         telefono.addEventListener("blur", validarTelefono);
         
         registroForm.addEventListener("submit", (e) => {
-            // Limpiar errores previos
             set.clear();
             if (errores) errores.innerHTML = "";
             
-            // Validar todos los campos
             const val1 = validarNombre();
             const val2 = validarEmail();
             const val3 = validarPassword();
@@ -176,9 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }
             } else {
-                // Simular envío exitoso (en un caso real, se enviaría al servidor)
                 alert("¡Registro exitoso! Serás redirigido a la página de inicio.");
-                // window.location.href = "index.html"; // Descomentar en implementación real
             }
         });
     }
