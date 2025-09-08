@@ -3,7 +3,6 @@ const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const links = navLinks.querySelectorAll("a");
 
-// Indicar página activa en el menú
 function setActivePage() {
     const currentPage = window.location.pathname.split("/").pop();
     links.forEach(link => {
@@ -35,7 +34,6 @@ links.forEach(link => {
     });
 });
 
-// Filtrar productos por categoría
 function filterProducts(category) {
     const products = document.querySelectorAll('.card');
     products.forEach(product => {
@@ -47,11 +45,9 @@ function filterProducts(category) {
     });
 }
 
-// Inicializar página activa al cargar
 document.addEventListener('DOMContentLoaded', function() {
     setActivePage();
     
-    // Configurar filtros de categoría si existen
     const categoryLinks = document.querySelectorAll('.menu-list a');
     categoryLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -197,52 +193,45 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-/*carrousel*/ 
+
 const slides = document.querySelectorAll('.slides img');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 let index = 0;
 let interval;
 
-// Función para mostrar slide
 function showSlide(i) {
-  slides.forEach(slide => slide.classList.remove('active'));
-  slides[i].classList.add('active');
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[i].classList.add('active');
 }
 
-// Función siguiente
 function nextSlide() {
-  index = (index + 1) % slides.length;
-  showSlide(index);
+    index = (index + 1) % slides.length;
+    showSlide(index);
 }
 
-// Función anterior
 function prevSlide() {
-  index = (index - 1 + slides.length) % slides.length;
-  showSlide(index);
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
 }
 
-// Eventos botones
 nextBtn.addEventListener('click', () => {
-  nextSlide();
-  resetInterval();
+    nextSlide();
+    resetInterval();
 });
 prevBtn.addEventListener('click', () => {
-  prevSlide();
-  resetInterval();
+    prevSlide();
+    resetInterval();
 });
 
-// Rotación automática cada 2 segundos
 function startInterval() {
-  interval = setInterval(nextSlide, 2500);
+    interval = setInterval(nextSlide, 2500);
 }
 function resetInterval() {
-  clearInterval(interval);
-  startInterval();
+    clearInterval(interval);
+    startInterval();
 }
 
-// Iniciar
 startInterval();
-// Iniciar mostrando la primera slide
 showSlide(index);
 startInterval();
